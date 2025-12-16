@@ -19,8 +19,8 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install project dependencies
-      run: pip install -e .
+    - name: Add current directory to Python path
+      run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
     
     - name: Run unit tests
       run: python -m unittest discover -v
