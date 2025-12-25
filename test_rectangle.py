@@ -12,5 +12,8 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             rectangle.area(0, 5)
 
+    def test_perimeter_positive(self):
+        self.assertEqual(rectangle.perimeter(10, 20), 50)
+
 if __name__ == '__main__':
     unittest.main()
